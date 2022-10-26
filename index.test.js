@@ -16,7 +16,7 @@ test('returns false if the password is not a match', async () => {
     expect(isMatch).toBe(false);
 });
 
-test('eturns true if the password is a match', async () => {
+test('returns true if the password is a match', async () => {
     const password = 'nobody ever knew';
     const hashed = await bcrypt.hash(password, 1);
     const isMatch = await comparePassword(password, hashed);
